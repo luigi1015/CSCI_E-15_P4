@@ -27,9 +27,9 @@ class QuizController extends Controller
 	/**
 	* Responds to requests to GET /takequiz/{id}
 	*/
-	public function getTakeQuiz($id = -1 )
+	public function getTakeQuiz( $id = NULL )
 	{
-		if( $id  < 0)
+		if( is_null($id) )
 		{
 			//return 'Take Quiz *invalid id* - GET';
 			return view('takeQuiz')->with('id', '*invalid*');
@@ -42,9 +42,9 @@ class QuizController extends Controller
 	/**
 	* Responds to requests to POST /takequiz/{id}
 	*/
-	public function postTakeQuiz($id)
+	public function postTakeQuiz( $id = NULL )
 	{
-		if( $id  < 0)
+		if( is_null($id) )
 		{
 			//return 'Take Quiz *invalid id* - POST';
 			return view('takeQuiz')->with('id', '*invalid*');
