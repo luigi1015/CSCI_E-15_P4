@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/createquiz', 'QuizController@getCreateQuiz');
+Route::post('/createquiz', 'QuizController@postCreateQuiz');
+Route::get('/takequiz/', 'QuizController@getTakeQuiz');
+Route::get('/takequiz/{id}', 'QuizController@getTakeQuiz');
+Route::post('/takequiz/{id}', 'QuizController@postTakeQuiz');
+Route::get('/grades', 'QuizController@getGrades');
+Route::get('/user', 'QuizController@getUser');

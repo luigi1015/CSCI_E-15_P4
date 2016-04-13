@@ -1,45 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
+        <title>Jeff's Quiz App</title>
     </head>
     <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
+	<a href="/createquiz">Create a quiz</a>
+	<br>
+	<a href="/takequiz">Take a quiz</a>
+	<br>
+	<a href="/takequiz/1">Take quiz 1</a>
+	<br>
+	<a href="/grades">Get grades</a>
+	<br>
+	<a href="/user">User Landing Page</a>
     </body>
 </html>

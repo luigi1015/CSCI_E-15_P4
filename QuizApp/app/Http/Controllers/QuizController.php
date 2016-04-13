@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace QuizApp\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use QuizApp\Http\Controllers\Controller;
 
 class QuizController extends Controller
 {
@@ -11,7 +11,8 @@ class QuizController extends Controller
 	*/
 	public function getCreateQuiz()
 	{
-		return 'Create a Quiz - GET';
+		//return 'Create a Quiz - GET';
+		return view('createQuiz');
 	}
 
 	/**
@@ -19,15 +20,23 @@ class QuizController extends Controller
 	*/
 	public function postCreateQuiz()
 	{
-		return 'Create a Quiz - POST';
+		//return 'Create a Quiz - POST';
+		return view('createQuiz');
 	}
 
 	/**
 	* Responds to requests to GET /takequiz/{id}
 	*/
-	public function getTakeQuiz($id)
+	public function getTakeQuiz($id = -1 )
 	{
-		return 'Take Quiz ' . $id . ' - GET';
+		if( $id  < 0)
+		{
+			//return 'Take Quiz *invalid id* - GET';
+			return view('takeQuiz')->with('id', '*invalid*');
+		}
+
+		//return 'Take Quiz ' . $id . ' - GET';
+		return view('takeQuiz')->with('id', $id);
 	}
 
 	/**
@@ -35,7 +44,14 @@ class QuizController extends Controller
 	*/
 	public function postTakeQuiz($id)
 	{
-		return 'Take Quiz ' . $id . ' - POST';
+		if( $id  < 0)
+		{
+			//return 'Take Quiz *invalid id* - POST';
+			return view('takeQuiz')->with('id', '*invalid*');
+		}
+
+		//return 'Take Quiz ' . $id . ' - POST';
+		return view('takeQuiz')->with('id', $id);
 	}
 
 	/**
@@ -43,7 +59,8 @@ class QuizController extends Controller
 	*/
 	public function getGrades()
 	{
-		return 'Get Grades';
+		//return 'Get Grades';
+		return view('grades');
 	}
 
 	/**
@@ -51,6 +68,7 @@ class QuizController extends Controller
 	*/
 	public function getUser()
 	{
-		return 'Get User';
+		//return 'Get User';
+		return view('user');
 	}
 }
