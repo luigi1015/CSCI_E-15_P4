@@ -18,6 +18,8 @@ class CreateCorrectAnswersTable extends Migration
 		$table->timestamps();//Create standard Laravel 'created_at' and 'updated_at' columns.
 		$table->integer('answer_id');//Foreign key to a correct answer.
 		//TODO: Make the above answer_id a foreign key.
+		$table->integer('question_id');//Foreign key to a question this is a correct answer for.
+		//TODO: Make the above question_id a foreign key.
 	});
     }
 
