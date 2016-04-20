@@ -55,7 +55,30 @@ if( App::environment('local') )
 	        echo '<strong style="background-color:crimson; padding:5px;">Caught exception: ', $e->getMessage(), "</strong>\n";
 	    }
 
+	    echo '<h1>Test QuizApp Database Setup</h1>';
+	    try {
+	        $results = DB::select('SHOW TABLES IN QuizApp;');
+	        echo '<strong style="background-color:green; padding:5px;">Connection confirmed</strong>';
+	        echo "<br><br>Your Tables:<br><br>";
+	        print_r($results);
+	    }
+	    catch (Exception $e) {
+	        echo '<strong style="background-color:crimson; padding:5px;">Caught exception: ', $e->getMessage(), "</strong>\n";
+	    }
+
 	    echo '</pre>';
 
 	});
 }
+
+if(App::environment('local')) {
+
+    Route::get('/drop', function() {
+
+        DB::statement('DROP DATABASE QuizApp');
+        DB::statement('CREATE DATABASE QuizApp');
+
+        return 'Dropped QuizApp; created QuizApp.';
+    });
+
+};
