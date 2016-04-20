@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CorrectAnsersTableSeeder extends Seeder
+class CorrectAnswersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds for the correct_answers table.

@@ -14,7 +14,7 @@ class QuestionsTableSeeder extends Seeder
 	DB::table('questions')->insert([
 		'created_at' => Carbon\Carbon::now()->toDateTimeString(),
 		'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-		'title' => 'Test Quuestion 1',
+		'text' => 'Test Quuestion 1',
 		'quiz_id' => 1//Temp quiz ID for now, change this later.
 	]);
     }
