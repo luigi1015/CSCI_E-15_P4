@@ -14,6 +14,11 @@ class CreateAnswersTable extends Migration
     {
         Schema::create('answers', function (Blueprint $table)
 	{
+		$table->increments('id');//Create a primary, auto-incrementing 'id' column.
+		$table->timestamps();//Create standard Laravel 'created_at' and 'updated_at' columns.
+		$table->string('text');//The text of the answer to show to the user.
+		$table->integer('question_id');//Foreign key to the question this answer belongs to.
+		//TODO: Make the above question_id an actual foreign key.
 	});
     }
 
