@@ -82,3 +82,7 @@ if(App::environment('local')) {
     });
 
 };
+
+if(App::environment('local')) {
+	Route::get('/test', 'QuizController@getTest');
+};
