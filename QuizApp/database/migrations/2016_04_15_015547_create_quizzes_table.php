@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQuizesTable extends Migration
+class CreateQuizzesTable extends Migration
 {
     /**
      * Run the Create Quiz Table migrations.
@@ -12,7 +12,7 @@ class CreateQuizesTable extends Migration
      */
     public function up()
     {
-        Schema::create('quizes', function (Blueprint $table)
+        Schema::create('quizzes', function (Blueprint $table)
 	{
 		$table->increments('id');//Create a primary, auto-incrementing 'id' column.
 		$table->timestamps();//Create standard Laravel 'created_at' and 'updated_at' columns.
@@ -29,6 +29,6 @@ class CreateQuizesTable extends Migration
      */
     public function down()
     {
-	Schema::drop('quizes');
+	Schema::drop('quizzes');
     }
 }

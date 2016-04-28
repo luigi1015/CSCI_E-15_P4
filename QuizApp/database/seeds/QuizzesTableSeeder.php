@@ -11,7 +11,7 @@ class QuizesTableSeeder extends Seeder
      */
     public function run()
     {
-	DB::table('quizes')->insert([
+	DB::table('quizzes')->insert([
 		'created_at' => Carbon\Carbon::now()->toDateTimeString(),
 		'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
 		'title' => 'Test Quiz 1',

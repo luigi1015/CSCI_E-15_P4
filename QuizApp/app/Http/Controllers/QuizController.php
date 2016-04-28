@@ -77,6 +77,6 @@ class QuizController extends Controller
 	*/
 	public function getTest()
 	{
-		return view('test');
+		return view('test')->with('quizzes',\QuizApp\Quiz::all());
 	}
 }
