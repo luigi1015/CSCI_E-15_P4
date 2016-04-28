@@ -75,7 +75,7 @@ class QuizController extends Controller
 	/**
 	* Responds to requests to GET /test
 	*/
-	public function getCreateQuiz()
+	public function getTest()
 	{
 		return view('test');
 	}
