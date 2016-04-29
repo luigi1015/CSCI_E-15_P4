@@ -13,5 +13,7 @@
 	<a href="/grades">Get grades</a>
 	<br>
 	<a href="/user">User Landing Page</a>
+	<br>
+	<a href="/test">Test Page</a>
     </body>
 </html>
