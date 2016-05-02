@@ -17,7 +17,7 @@ class CreateQuizzesTable extends Migration
 		$table->increments('id');//Create a primary, auto-incrementing 'id' column.
 		$table->timestamps();//Create standard Laravel 'created_at' and 'updated_at' columns.
 		$table->string('title');
-		$table->integer('user_id');//Foreign key to the user table for who owns the quiz.
+		//$table->integer('user_id');//Foreign key to the user table for who owns the quiz.
 		//TODO: Make the user_id above an actual foreign key.
 	});
     }

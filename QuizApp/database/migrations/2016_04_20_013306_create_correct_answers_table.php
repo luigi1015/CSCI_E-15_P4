@@ -6,30 +6,26 @@ use Illuminate\Database\Migrations\Migration;
 class CreateCorrectAnswersTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migration to create the correct_answers table.
      *
      * @return void
      */
-    public function up()
-    {
-	Schema::create('correct_answers', function (Blueprint $table)
+	public function up()
 	{
-		$table->increments('id');//Create a primary, auto-incrementing 'id' column.
-		$table->timestamps();//Create standard Laravel 'created_at' and 'updated_at' columns.
-		$table->integer('answer_id');//Foreign key to a correct answer.
-		//TODO: Make the above answer_id a foreign key.
-		$table->integer('question_id');//Foreign key to a question this is a correct answer for.
-		//TODO: Make the above question_id a foreign key.
-	});
+		Schema::create('correctAnswers', function (Blueprint $table)
+		{
+			$table->increments('id');//Create a primary, auto-incrementing 'id' column.
+			$table->timestamps();//Create standard Laravel 'created_at' and 'updated_at' columns.
+		});
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migration that creates the correct_answers table.
      *
      * @return void
      */
-    public function down()
-    {
-	Schema::drop('correct_answers');
-    }
+	public function down()
+	{
+		Schema::drop('correctAnswers');
+	}
 }

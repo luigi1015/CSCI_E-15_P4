@@ -9,13 +9,17 @@ class CorrectAnswersTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-	DB::table('correct_answers')->insert([
-		'created_at' => Carbon\Carbon::now()->toDateTimeString(),
-		'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-		'question_id' => 1,//Temp question ID for now, change this later.
-		'answer_id' => 1//Temp answer ID for now, change this later.
-	]);
-    }
+	public function run()
+	{
+		$question_id = \QuizApp\Question::where('text','=','Test Question 1')->pluck('id')->first();
+		$answer_id = \QuizApp\Answer::where('text','=','Test Answer 1')->pluck('id')->first();
+		DB::table('correctAnswers')->insert([
+			'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+			'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+			'question_id' => $question_id,//Temp question ID for now, change this later.
+			'answer_id' => $answer_id//Temp answer ID for now, change this later.
+			//'question_id' => 1,//Temp question ID for now, change this later.
+			//'answer_id' => 1//Temp answer ID for now, change this later.
+		]);
+	}
 }
