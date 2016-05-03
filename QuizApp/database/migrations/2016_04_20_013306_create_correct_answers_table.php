@@ -12,7 +12,7 @@ class CreateCorrectAnswersTable extends Migration
      */
 	public function up()
 	{
-		Schema::create('correctAnswers', function (Blueprint $table)
+		Schema::create('correct_answers', function (Blueprint $table)
 		{
 			$table->increments('id');//Create a primary, auto-incrementing 'id' column.
 			$table->timestamps();//Create standard Laravel 'created_at' and 'updated_at' columns.
@@ -26,6 +26,6 @@ class CreateCorrectAnswersTable extends Migration
      */
 	public function down()
 	{
-		Schema::drop('correctAnswers');
+		Schema::drop('correct_answers');
 	}
 }

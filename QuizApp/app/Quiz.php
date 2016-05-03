@@ -6,5 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quiz extends Model
 {
-    //
+	public function questions()
+	{
+		//A quiz can have many questions.
+		return $this->hasMany('\QuizApp\Question');
+	}
+
+	public function user()
+	{
+		//A quiz can belongs to a user.
+		return $this->belongsTo('\QuizApp\User');
+	}
 }

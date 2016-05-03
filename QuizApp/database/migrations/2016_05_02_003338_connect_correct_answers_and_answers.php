@@ -12,7 +12,7 @@ class ConnectCorrectAnswersAndAnswers extends Migration
      */
     public function up()
     {
-		Schema::table('correctAnswers', function (Blueprint $table)
+		Schema::table('correct_answers', function (Blueprint $table)
 		{
 			//Create the database field for the questions table
 			$table->integer('question_id')->unsigned();//Foreign key to a question this is a correct answer for.
@@ -35,7 +35,7 @@ class ConnectCorrectAnswersAndAnswers extends Migration
      */
     public function down()
     {
-		Schema::table('correctAnswers', function (Blueprint $table)
+		Schema::table('correct_answers', function (Blueprint $table)
 		{
 			//Drop the foreign key part of the database field for the questions foreign key.
 			//$table->dropForeign('correctAnswers_question_id_foreign');

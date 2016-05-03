@@ -23,4 +23,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+	public function quizzes()
+	{
+		//A user can have many quizzes.
+		return $this->hasMany('\QuizApp\Quiz');
+	}
 }
