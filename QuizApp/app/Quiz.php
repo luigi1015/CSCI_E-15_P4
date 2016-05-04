@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quiz extends Model
 {
+	protected $fillable = ['title', 'user_id'];
+
 	public function questions()
 	{
 		//A quiz can have many questions.

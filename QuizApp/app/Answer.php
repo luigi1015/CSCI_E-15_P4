@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Answer extends Model
 {
+	protected $fillable = ['text', 'question_id'];
+
 	public function correctanswer()
 	{
 		//A answers can have a correct answer.
