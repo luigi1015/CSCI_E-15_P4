@@ -15,5 +15,13 @@
 	<a href="/user">User Landing Page</a>
 	<br>
 	<a href="/test">Test Page</a>
+	<br>
+	<a href="/show-login-status">Test if Logged In Page</a>
+	<br>
+	<a href="/login">Log In Page</a>
+	<br>
+	<a href="/register">Register Page</a>
+	<br>
+	<a href="/logout">Log Out Page</a>
     </body>
 </html>
