@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Login</title>
-	</head>
-	<body>
-		@if(count($errors) > 0)
-			<ul class="errors">
-				@foreach ($errors->all() as $error)
-					<li>{{$error}}</li>
-				@endforeach
-			</ul>
-		@endif
+@extends('master')
+
+@section('title')
+Login
+@stop
+
+@section('content')
 		If you don't have an account please register <a href="/register">here</a>.
 		<br>
 		<form method="POST" action="/login">
@@ -26,7 +20,4 @@
 
 			<button type="submit">Login</button>
 		</form>
-		<br>
-		<a href="/">Back to homepage</a>
-	</body>
-</html>
+@stop

@@ -17,7 +17,24 @@ class QuestionsTableSeeder extends Seeder
 			'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
 			'text' => 'Test Question 1',
 			'quiz_id' => $quiz_id
-			//'quiz_id' => 1//Temp quiz ID for now, change this later.
+		]);
+		DB::table('questions')->insert([
+			'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+			'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+			'text' => 'Test Question 2',
+			'quiz_id' => $quiz_id
+		]);
+		DB::table('questions')->insert([
+			'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+			'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+			'text' => 'Test Question 3',
+			'quiz_id' => $quiz_id
+		]);
+		DB::table('questions')->insert([
+			'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+			'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+			'text' => 'Test Question 4',
+			'quiz_id' => $quiz_id
 		]);
 	}
 }

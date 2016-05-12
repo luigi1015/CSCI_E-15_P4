@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Jeff's Quiz App</title>
-    </head>
-    <body>
-	@if (isset($quiz) and !($quiz->isEmpty()))
+@extends('master')
+
+@section('title')
+Jeff's Quiz App
+@stop
+
+@section('content')
+	@if (isset($quiz))
 		<h1>{{$quiz->title}}</h1>
+		<form method="POST" action="/takequiz">
 		@forelse ($questions as $question)
 			@if ($question->quiz_id == $quiz->id)
 				{{$question->text}}
@@ -27,10 +29,21 @@
 			<br>
 			<br>
 		@endforelse
+		<button type="submit">Submit Answers</button>
+		</form>
 	@else
-		No quiz found.
+		@if (isset($quizzes))
+			Quizzes:
+			<br>
+			@forelse ($quizzes as $quiz)
+				<a href='\takequiz\{{$quiz->id}}'>{{$quiz->title}}</a>
+				<br>
+			@empty
+				No quizzes found.
+			@endforelse
+		@else
+			No quiz found.
+		@endif
 	@endif
 	<br>
-	<a href="/">Back to homepage</a>
-    </body>
-</html>
+@stop
