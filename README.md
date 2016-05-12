@@ -2,11 +2,11 @@
 
 Project 4 for class CSCI E-15
 
-Project Title: 
+Project Title: QuizApp
 
 Live URL: http://p4.jeffcrone.me/
 
-Project Description: 
+Project Description: A web application to create and take quizzes.
 
 Screencast Demo: 
 
