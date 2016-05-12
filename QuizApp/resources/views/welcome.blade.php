@@ -16,12 +16,6 @@ Welcome tp Jeff's Quiz App
 		<a href="/grades">Get grades</a>
 		<br>
 		<a href="/user">User Landing Page</a>
-		<br>
-		<a href="/logout">Log Out Page</a>
 		@else{{-- If NOT logged in --}}
-		<br>
-		<a href="/login">Log In Page</a>
-		<br>
-		<a href="/register">Register Page</a>
 		@endif
 @stop
