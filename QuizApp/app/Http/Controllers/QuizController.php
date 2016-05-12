@@ -12,7 +12,6 @@ class QuizController extends Controller
 	*/
 	public function getCreateQuiz()
 	{
-		//return 'Create a Quiz - GET';
 		return view('createQuiz');
 	}
 
@@ -279,11 +278,9 @@ class QuizController extends Controller
 	{
 		if( is_null($id) )
 		{
-			//return 'Take Quiz *invalid id* - POST';
 			return view('takeQuiz')->with('id', '*invalid*');
 		}
 
-		//return 'Take Quiz ' . $id . ' - POST';
 		return view('takeQuiz')->with('id', $id);
 	}
 
@@ -292,7 +289,6 @@ class QuizController extends Controller
 	*/
 	public function getGrades()
 	{
-		//return 'Get Grades';
 		return view('grades');
 	}
 
@@ -301,7 +297,6 @@ class QuizController extends Controller
 	*/
 	public function getUser()
 	{
-		//return 'Get User';
 		return view('user');
 	}
 

@@ -17,7 +17,6 @@ class QuizzesTableSeeder extends Seeder
 			'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
 			'title' => 'Test Quiz 1',
 			'user_id' => $user_id
-			//'user_id' => 1//Temp user ID for now, change this once users are set up.
 		]);
 	}
 }
