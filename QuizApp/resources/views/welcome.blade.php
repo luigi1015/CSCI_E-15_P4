@@ -5,9 +5,6 @@ Welcome tp Jeff's Quiz App
 @stop
 
 @section('content')
-		<a href="/show-login-status">Test if Logged In Page</a>
-		<br>
-		<a href="/test">Test Page</a>
 		@if( Auth::check() ){{-- If logged in --}}
 		<br>
 		<a href="/createquiz">Create a quiz</a>
